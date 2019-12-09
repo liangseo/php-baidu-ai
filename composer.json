@@ -1,5 +1,5 @@
 {
-	"name": "laravel-baidu-ai",
+	"name": "php-baidu-ai",
 	"description": "百度AI SDK集成",
 	"type": "composer-plugin",
 	"license": "MIT",
