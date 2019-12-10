@@ -2,7 +2,6 @@
 	"name": "liangseo/php-baidu-ai",
 	"description": "百度AI SDK集成",
 	"keywords": ["baidu ai", "百度Ai","php baidu ai", "sdk"],
-	"type": "composer-plugin",
 	"license": "MIT",
 	"authors": [
 		{
