@@ -6,7 +6,7 @@
  */
 
 namespace BaiduAi\Kernel;
-use Baidu\Kernel\Support\Collection;
+use BaiduAi\Kernel\Support\Collection;
 
 class Config extends Collection
 {

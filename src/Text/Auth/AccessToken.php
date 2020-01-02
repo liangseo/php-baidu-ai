@@ -17,9 +17,9 @@ class AccessToken extends BaseAccessToken
     protected function getCredentials(): array
     {
         return [
-            'grant_type'  => 'client_credential',
-            'appid'       => $this->app['config']['app_id'],
-            'secret'      => $this->app['config']['secret']
+            'grant_type'     => 'client_credentials',
+            'client_id'      => $this->app['config']['client_id'],
+            'client_secret'  => $this->app['config']['client_secret']
         ];
     }
 }

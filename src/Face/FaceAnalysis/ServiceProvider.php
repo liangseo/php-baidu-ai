@@ -12,7 +12,7 @@ use Pimple\ServiceProviderInterface;
 class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app) {
-        $app['human_analysis'] = function ($app) {
+        $app['face_analysis'] = function ($app) {
             return new Client($app);
         };
     }

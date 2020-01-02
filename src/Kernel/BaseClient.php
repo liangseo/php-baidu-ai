@@ -22,7 +22,7 @@ class BaseClient
 
     protected $accessToken;
 
-    protected $baseUri;
+    protected $baseUri = 'https://aip.baidubce.com/';
 
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null){
         $this->app = $app;

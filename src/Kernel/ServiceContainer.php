@@ -51,10 +51,27 @@ class ServiceContainer extends Container
         ], $this->providers);
     }
 
+    public function __get($id)
+    {
+        return $this->offsetGet($id);
+    }
+
+    public function __set($id, $value)
+    {
+        $this->offsetSet($id, $value);
+    }
+
     public function registerConfig(array $config) {
         $this['config'] = function () use ($config) {
           return new Config(array_replace_recursive($this->defaultConfig, $config));
         };
+    }
+
+    public function registerProviders(array $providers)
+    {
+        foreach ($providers as $provider) {
+            parent::register(new $provider());
+        }
     }
 
 }

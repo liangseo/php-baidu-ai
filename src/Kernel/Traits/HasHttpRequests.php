@@ -76,7 +76,7 @@ trait HasHttpRequests
 
         $options = $this->fixJsonIssue($options);
 
-        if (property_exists($this, 'baseUrl') && !is_null($this->baseUri)) {
+        if (property_exists($this, 'baseUri') && !is_null($this->baseUri)) {
             $options['base_uri'] = $this->baseUri;
         }
 
@@ -111,7 +111,7 @@ trait HasHttpRequests
             if(empty($options['json'])) {
                 $options['body'] = \GuzzleHttp\json_encode($options['json'], JSON_FORCE_OBJECT);
             } else {
-                $options['body'] = \GuzzleHttp\json_encode($options['json'], JSON_UNESAPED_UNICODE);
+                $options['body'] = \GuzzleHttp\json_encode($options['json'], JSON_UNESCAPED_UNICODE);
             }
 
             unset($options['json']);
