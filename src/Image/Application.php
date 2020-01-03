@@ -7,13 +7,13 @@
 
 namespace BaiduAi\Image;
 
-
+use BaiduAi\Auth\ServiceProvider;
 use BaiduAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
     protected $providers = [
-        Auth\ServiceProvider::class,
+        ServiceProvider::class,
         HumanAnalysis\ServiceProvider::class,
         ImageEnhancement\ServiceProvider::class,
         ImageRecognition\ServiceProvider::class,

@@ -5,14 +5,14 @@
  * host: https://www.liangseo.com
  */
 
-namespace BaiduAi\Image\Auth;
+namespace BaiduAi\Auth;
 
 
 use BaiduAi\Kernel\BaseAccessToken;
 
 class AccessToken extends BaseAccessToken
 {
-    protected $endpointToGetToken = '';
+    protected $endpointToGetToken = 'https://aip.baidubce.com/oauth/2.0/token';
 
     protected function getCredentials(): array
     {

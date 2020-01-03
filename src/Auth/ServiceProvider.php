@@ -4,7 +4,7 @@
  * date: 2019/10/23
  */
 
-namespace BaiduAi\Image\Auth;
+namespace BaiduAi\Auth;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -12,8 +12,8 @@ use Pimple\ServiceProviderInterface;
 class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app) {
-        $app['human_analysis'] = function ($app) {
-            return new Client($app);
+        !isset($app['access_token']) && $app['access_token'] = function ($app) {
+            return new AccessToken($app);
         };
     }
 }

@@ -7,13 +7,13 @@
 
 namespace BaiduAi\Face;
 
-
+use BaiduAi\Auth\ServiceProvider;
 use BaiduAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
     protected $providers = [
-        Auth\ServiceProvider::class,
+        ServiceProvider::class,
         FaceAnalysis\ServiceProvider::class,
         FaceLibrary\ServiceProvider::class,
     ];

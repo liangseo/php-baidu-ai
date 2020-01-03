@@ -7,13 +7,13 @@
 
 namespace BaiduAi\Text;
 
-
+use BaiduAi\Auth\ServiceProvider;
 use BaiduAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
     protected $providers = [
-        Auth\ServiceProvider::class,
+        ServiceProvider::class,
         Bill\ServiceProvider::class,
         Car\ServiceProvider::class,
         Card\ServiceProvider::class,
