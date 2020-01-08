@@ -89,7 +89,7 @@ trait InteractsWithCache
     protected function createDefaultCache()
     {
         if ($this->isSymfony43()) {
-            return new Psr16Cache(new FilesystemAdapter('easywechat', 1500));
+            return new Psr16Cache(new FilesystemAdapter('baiduai', 1500));
         }
 
         return new FilesystemCache();

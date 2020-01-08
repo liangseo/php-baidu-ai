@@ -7,8 +7,16 @@
 
 namespace BaiduAi\Kernel\Support;
 
+namespace BaiduAi\Kernel\Support;
+use ArrayAccess;
+use ArrayIterator;
+use Countable;
+use BaiduAi\Kernel\Contracts\Arrayable;
+use IteratorAggregate;
+use JsonSerializable;
+use Serializable;
 
-class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonSerializable, \Serializable, Arrayable
+class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable, Serializable, Arrayable
 {
     protected $items = [];
 
